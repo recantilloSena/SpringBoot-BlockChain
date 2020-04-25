@@ -20,7 +20,11 @@ public class BlockProperties {
 
     private BigInteger gasPrice;
     private BigInteger gasLimit;
-
+    
+    private String blockNumber;
+    private BigInteger acumulado;
+ 
+    
     public StaticGasProvider gas() {
         return new StaticGasProvider(gasPrice, gasLimit);
     }

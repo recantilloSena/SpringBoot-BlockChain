@@ -2,6 +2,7 @@ package com.jug.blockchain.services;
 
 import com.jug.blockchain.config.BlockProperties;
 import com.jug.blockchain.contracts.SimpleSuma;
+import java.io.IOException;
 import java.math.BigInteger;
 
 
@@ -16,7 +17,9 @@ import org.web3j.tx.TransactionManager;
 
 import lombok.AllArgsConstructor;
 import org.web3j.protocol.core.RemoteCall;
-import org.web3j.protocol.core.RemoteFunctionCall;
+
+import org.web3j.protocol.core.methods.response.EthBlockNumber;
+import org.web3j.protocol.core.methods.response.Web3ClientVersion;
 
 /**
  * ElectionsService
@@ -62,6 +65,14 @@ public class SumaService {
         return new ClientTransactionManager(web3j, accountAddress);
     }
 
+   public  Web3ClientVersion getVersion () throws IOException {
+         return web3j.web3ClientVersion().send();
+      
+   }
    
+   public String getBlockNumber () throws IOException {
+       
+       return web3j.ethBlockNumber().send().getBlockNumber().toString();
+   }
     
 }
