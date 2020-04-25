@@ -7,7 +7,7 @@ Este proyecto muestra un ejemplo básico de cómo podemos realizar llamados a Sm
 Convertimos todas las funcionalidades del SmartContract en simples EndPoints de una API-Rest SpringBoot.
 
 
-# Requisitos
+# Requisitos 
 
 # 1. Solidity (solc)
 # 2. JDK 1.8
@@ -15,5 +15,7 @@ Convertimos todas las funcionalidades del SmartContract en simples EndPoints de 
 # 4. Maven 3.x
 # 5. Una red Ethereum con el protocolo RPC activo (Simulada con ganache en el Ejemplo)
 # 6. Netbeans 11 o cualquier otro IDE.
+# 7. Vaadin 14 for check process an easy View.
+
 
 
